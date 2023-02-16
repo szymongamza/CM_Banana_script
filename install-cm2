@@ -1,6 +1,7 @@
 #!/bin/bash -e
 git clone https://github.com/szymongamza/CM_Banana_script.git
 sleep 5
+sudo apt remove -y gnome-keyring
 sudo apt install -y xdotool
 sudo timedatectl set-timezone Europe/Warsaw
 cat /home/pi/CM_Banana_script/cron_scripts/* | crontab -
