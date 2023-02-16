@@ -3,10 +3,7 @@ git clone https://github.com/szymongamza/CM_script.git
 sleep 5
 sudo apt install -y xdotool
 sudo timedatectl set-timezone Europe/Warsaw
-crontab /home/pi/CM_Banana_script/cron_scripts/turn_off_screen_evening
-crontab /home/pi/CM_Banana_script/cron_scripts/turn_off_screen_morning
-crontab /home/pi/CM_Banana_script/cron_scripts/turn_on_screen
-crontab /home/pi/CM_Banana_script/cron_scripts/every_day_reboot
+cat /home/pi/CM_Banana_script/cron_scripts/* | crontab -
 sudo cp /home/pi/CM_Banana_script/autostart/* /home/pi/.config/autostart
 chmod +x /home/pi/CM_Banana_script/start_chromium_browser.sh
 
