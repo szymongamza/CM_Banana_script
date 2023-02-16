@@ -1,0 +1,17 @@
+#!/bin/bash -e
+git clone https://github.com/szymongamza/CM_script.git
+sleep 5
+sudo apt install -y xdotool
+sudo timedatectl set-timezone Europe/Warsaw
+crontab /home/pi/CM_Banana_script/cron_scripts/turn_off_screen_evening
+crontab /home/pi/CM_Banana_script/cron_scripts/turn_off_screen_morning
+crontab /home/pi/CM_Banana_script/cron_scripts/turn_on_screen
+crontab /home/pi/CM_Banana_script/cron_scripts/every_day_reboot
+sudo cp /home/pi/CM_Banana_script/autostart/* /home/pi/.config/autostart
+chmod +x /home/pi/CM_Banana_script/start_chromium_browser.sh
+
+read -p "Wprowadz url strony do wyswietlania: " url
+echo $url | sudo tee /home/pi/CM_Banana_script/url.txt
+
+sleep 5
+sudo reboot

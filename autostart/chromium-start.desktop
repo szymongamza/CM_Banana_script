@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Chromium-Autostart
+Exec=/home/pi/CM_Banana_script/start_chromium_browser.sh
+X-MATE-AutoStart-enabled=true
