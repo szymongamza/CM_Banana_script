@@ -1,5 +1,5 @@
 #!/bin/bash -e
-git clone https://github.com/szymongamza/CM_script.git
+git clone https://github.com/szymongamza/CM_Banana_script.git
 sleep 5
 sudo apt install -y xdotool
 sudo timedatectl set-timezone Europe/Warsaw
