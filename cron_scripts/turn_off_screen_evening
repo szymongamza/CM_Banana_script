@@ -1,1 +1,1 @@
-*/1 21-23 * * * export DISPLAY=:0 && xset dpms force off
+*/1 22-23 * * * export DISPLAY=:0 && xset dpms force off
